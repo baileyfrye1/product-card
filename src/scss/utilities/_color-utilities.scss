@@ -1,0 +1,24 @@
+@use '../abstracts/' as *;
+
+// Take all the colors in the colors map
+// and output text- and bg- classes
+
+@each $color, $shade in $colors {
+    @each $prop, $value in $shade {
+        .text-#{$color}-#{$prop} {
+            color: var(--clr-#{$color}-#{$prop}) !important;
+        }
+
+        .bg-#{$color}-#{$prop} {
+            background-color: var(--clr-#{$color}-#{$prop}) !important;
+        }
+    }
+}
+
+@mixin mq($key) {
+    $size: map-get($breakpoints, $key);
+
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}

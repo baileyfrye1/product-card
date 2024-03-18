@@ -1,0 +1,21 @@
+.card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-400);
+  background: var(--clr-primary-500);
+  color: var(--clr-neutral-100);
+  padding: 0.8em 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  .btn__icon {
+    height: 1.25rem;
+    display: inline-block;
+    margin-right: 0.75em;
+  }
+  &:hover,
+  &:focus {
+    background: var(--clr-primary-700);
+  }
+}

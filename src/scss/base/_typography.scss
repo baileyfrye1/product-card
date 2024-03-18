@@ -1,0 +1,47 @@
+@use '../abstracts/' as *;
+
+body {
+  font-size: var(--fs-300);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--clr-neutral-900);
+  letter-spacing: -0.5px;
+}
+
+.card__body {
+  .card__subtext {
+    text-transform: uppercase;
+    color: var(--clr-neutral-400);
+    letter-spacing: 5px;
+  }
+  .card__header {
+    font-family: 'Fraunces', serif;
+    font-size: var(--fs-700);
+    margin-block: 1rem;
+    line-height: 1;
+  }
+  .card__description {
+    width: 40ch;
+    color: var(--clr-neutral-400);
+    line-height: 1.8;
+    @include mq(small) {
+      text-wrap: balance;
+      font-size: var(--fs-400);
+      width: auto;
+    }
+  }
+  .card__price {
+    margin-block: 1.5rem;
+    display: flex;
+    align-items: center;
+    .card__current-price {
+      font-family: 'Fraunces';
+      color: var(--clr-primary-500);
+      margin-right: 1rem;
+      font-size: 2rem;
+    }
+    .card__old-price {
+      color: var(--clr-neutral-400);
+      text-decoration: line-through;
+    }
+  }
+}
