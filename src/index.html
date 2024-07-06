@@ -16,7 +16,17 @@
       <div class="container">
         <div class="card">
           <div class="card__img-container">
-            <img alt="" class="card__img" />
+            <picture class="card__picture">
+              <source
+                media="(min-width:40em)"
+                srcset="assets/images/image-product-desktop.jpg"
+              />
+              <img
+                src="assets/images/image-product-mobile.jpg"
+                alt="Product Image"
+                class="card__img"
+              />
+            </picture>
           </div>
           <div class="card__body">
             <p class="card__subtext">Perfume</p>
@@ -29,13 +39,14 @@
               <p class="card__current-price">$149.99</p>
               <p class="card__old-price">$169.99</p>
             </div>
-            <a href="#" class="card__btn"
-              ><img
+            <a href="#" class="card__btn">
+              <img
                 src="./assets/images/icon-cart.svg"
                 alt="Shopping Cart Icon"
                 class="btn__icon"
-              />Add to Cart</a
-            >
+              />
+              Add to Cart
+            </a>
           </div>
         </div>
       </div>
